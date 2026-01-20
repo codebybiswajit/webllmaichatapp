@@ -48,6 +48,7 @@ const App = () => {
     loadModel();
   }, [modelId]);
   async function sendMessage() {
+    setStatus(``)
     setPaused(false);
     if (!engine || !input.trim()) return;
     const userMsg: ChatCompletionMessageParam = {
